@@ -21,6 +21,7 @@ class Profile(models.Model):
         self.delete()
     
 
+
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
 
@@ -37,6 +38,7 @@ class Project(models.Model):
     date_craeted= models.DateField(auto_now_add=True )
     
 
+
     def save_project(self):
         self.save()
 
@@ -50,3 +52,6 @@ class Project(models.Model):
     def search_by_title(cls,search_term):
         projects = cls.objects.filter(title__icontains=search_term)
         return projects
+
+    def __str__(self):
+        return self.title
