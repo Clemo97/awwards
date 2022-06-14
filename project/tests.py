@@ -21,3 +21,8 @@ class ProfileTest(TestCase):
         all_profiles = Profile.objects.all()
         self.assertEqual(len(all_profiles),0)
 
+
+class ProjectsTestCase(TestCase):
+    def setUp(self):
+        self.new_post = Project(title = 'project',image = 'trial.jpg',description = 'I like your pic',user = peris,link = 'https://trial.com',date_craeted='Oct,12.2020')
+
