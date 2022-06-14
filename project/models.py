@@ -11,5 +11,13 @@ class Profile(models.Model):
     user =models.OneToOneField(User, on_delete = models.CASCADE)
     date_craeted= models.DateField(auto_now_add=True )
 
+    def __str__(self):
+        return f'{self.user.username} Profile'
 
+    def save_profile(self):
+        self.save
+    
+    def delete_user(self):
+        self.delete()
+    
     
