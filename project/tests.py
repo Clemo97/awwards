@@ -10,3 +10,14 @@ class ProfileTest(TestCase):
 
     def test_instance(self):
         self.assertTrue(isinstance(self.peris,Profile))
+
+    def test_save_profile(self):
+        self.save_profile()
+        all_profiles = Profile.objects.all()
+        self.assertTrue(len(all_profiles),0)
+
+    def test_delete_profile(self):
+        self.peris.delete_profile()
+        all_profiles = Profile.objects.all()
+        self.assertEqual(len(all_profiles),0)
+
