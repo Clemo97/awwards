@@ -3,3 +3,10 @@ from .models import Profile,Project
 from django.contrib.auth.models import User
 
 
+class ProfileTest(TestCase):
+    def setUp(self):
+        self.peris = User(username = 'Peris',email = 'peris@gmail.com')
+        self.peris = Profile(user = Self.peris,user_id = 1,bio = 'my awwards',profile_pic = 'image.jpg',date_craeted='Oct,12.2020')
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.peris,Profile))
