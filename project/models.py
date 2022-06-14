@@ -28,4 +28,13 @@ def create_user_profile(sender, instance, created, **kwargs):
         Profile.objects.create(user=instance)
 
 
+class Project(models.Model):
+    title = models.TextField(max_length=30)
+    image = models.ImageField(upload_to = 'home/', blank=True)
+    link= models.URLField(max_length=200)
+    description = models.TextField(max_length=300)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default='', null=True ,related_name='author')
+    date_craeted= models.DateField(auto_now_add=True )
+    
+
     
