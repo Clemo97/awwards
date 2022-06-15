@@ -9,8 +9,8 @@
 The application will allows a user to post a project he/she has created and get it reviewed by his/her peers.
 
 ## Home Page
-![Alt text](project/static/1.png?raw=true "Title")
-![Alt text](project/static/2.png?raw=true "Title")
+![Alt text](static/1.png?raw=true "Title")
+![Alt text](static/2.png?raw=true "Title")
 
 As a user of the web application you will be able to:
 
